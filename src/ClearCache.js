@@ -23,6 +23,8 @@ function withClearCache(Component) {
         .then((meta) => {
           const latestVersionDate = meta.buildDate;
           const currentVersionDate = packageJson.buildDate;
+          console.log("latestVersionDate", latestVersionDate);
+          console.log("currentVersionDate", currentVersionDate);
 
           const shouldForceRefresh = buildDateGreaterThan(
             latestVersionDate,
@@ -35,7 +37,7 @@ function withClearCache(Component) {
             setIsLatestBuildDate(true);
           }
         });
-    }, []);
+    });
 
     const refreshCacheAndReload = () => {
       if (caches) {
