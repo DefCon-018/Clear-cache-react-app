@@ -16,7 +16,7 @@ function MainApp(props) {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1>React project updation</h1>
+        <h1>React project updation test</h1>
         <p>Build date: {getBuildDate(packageJson.buildDate)}</p>
       </header>
     </div>
